@@ -12,45 +12,139 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Home Page</title>
   </head>
-  <body>
+  <body class="container">
     <!-- Background video -->
-    <video autoplay muted loop id="background-video" class="position">
+    <video autoplay muted loop id="video-bg">
       <source src="video/500648.mp4" type="video/mp4" />
     </video>
+    <!-- Header section -->
+    <header id="navigation">
+      <!-- Navigation menu -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Development</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Social Networking</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">Music</a></li>
+        <li><a href="#">Shopping</a></li>
+        <li><a href="#">Travel</a></li>
+        <li><a href="#">Health</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Social Media</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">OS</a></li>
+        <li><a href="#">Kids</a></li>
+      </ul>
+      <!-- Date -->
+      <div>
+        <p id="date">Luni, 22 Februarie 2021</p>
+      </div>
+    </header>
     <main class="container">
-      <!-- Navigation section -->
-      <nav id="navigation" class="position">
-        <!-- Navigation Menu -->
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Development</a></li>
-          <li><a href="#">Business</a></li>
-          <li><a href="#">Social Networking</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Sports</a></li>
-          <li><a href="#">Entertainment</a></li>
-          <li><a href="#">Games</a></li>
-          <li><a href="#">Movies</a></li>
-          <li><a href="#">Music</a></li>
-          <li><a href="#">Shopping</a></li>
-          <li><a href="#">Travel</a></li>
-          <li><a href="#">Health</a></li>
-          <li><a href="#">Technology</a></li>
-          <li><a href="#">Social Media</a></li>
-          <li><a href="#">Blogs</a></li>
-          <li><a href="#">Os Related</a></li>
-          <li><a href="#">Kids</a></li>
-        </ul>
+      <!-- Clock $ greeting section -->
+      <section>
         <!-- Time -->
-        <div id="time">
-          <p>Luni, 22 Februarie 2021</p>
+        <div>
+          <p id="time">00:00:00</p>
         </div>
-      </nav>
+        <!-- Greeting -->
+        <div>
+          <p id="greeting">Buna dimineata, <span id="name">Alex</span>!</p>
+        </div>
+        <!-- Encouraging message -->
+        <div>
+          <p id="message">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
+            architecto!
+          </p>
+        </div>
+      </section>
+
+      <!-- Search section -->
+      <section id="search-section">
+        <div class="search-section">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Google search..."
+          />
+          <button id="btn"><i class="fa fa-search"></i></button>
+        </div>
+      </section>
+
+      <!-- Bookmarks Section -->
+      <section id="bookmark-section">
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+        <div class="bookmark"></div>
+      </section>
     </main>
+    <!-- Footer -->
+    <footer>
+      <div id="location-and-weather">
+        <div id="location">
+          <p id="city">Constanta,</p>
+          <p id="country">Romania</p>
+        </div>
+        <div id="weather-api">
+          <p id="weather"><i class="fas fa-cloud-rain"></i> 5 <sup>0</sup></p>
+          <p id="humidity">Humidity <span id="humidity-percent">50 %</span></p>
+        </div>
+      </div>
+      <div>
+        <p id="cite">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quam
+          nesciunt consequuntur in commodi ipsam mollitia doloribus maiores
+          error officiis reiciendis, magnam sunt libero molestias.
+        </p>
+      </div>
+      <div>
+        <a href="#" id="settings"><i class="fas fa-cog"></i></a>
+      </div>
+    </footer>
   </body>
 </html>
