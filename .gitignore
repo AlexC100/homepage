@@ -11,6 +11,9 @@ lerna-debug.log*
 *.mp4
 *.m4v
 
+# Text files
+*.txt
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 

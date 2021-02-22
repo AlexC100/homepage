@@ -1,0 +1,62 @@
+:root {
+  --white-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: #f4f4f4;
+  color: var(--white-color);
+}
+
+/* Utility classes */
+.position {
+  position: fixed;
+}
+
+/* Background Video Styling */
+body #background-video {
+  z-index: -1;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Navigation styling */
+.container #navigation {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container #navigation ul {
+  list-style: none;
+}
+
+.container #navigation ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.container #navigation ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.container #navigation ul li a:hover {
+  opacity: 0.8;
+}
+
+.container #navigation #time {
+  padding: 10px;
+}
