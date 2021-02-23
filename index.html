@@ -30,34 +30,37 @@
     <video autoplay muted loop id="video-bg">
       <source src="video/500648.mp4" type="video/mp4" />
     </video>
+
     <!-- Header section -->
     <header id="navigation">
       <!-- Navigation menu -->
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Development</a></li>
-        <li><a href="#">Business</a></li>
-        <li><a href="#">Social Networking</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Sports</a></li>
-        <li><a href="#">Entertainment</a></li>
-        <li><a href="#">Games</a></li>
-        <li><a href="#">Movies</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Shopping</a></li>
-        <li><a href="#">Travel</a></li>
-        <li><a href="#">Health</a></li>
-        <li><a href="#">Technology</a></li>
-        <li><a href="#">Social Media</a></li>
-        <li><a href="#">Blogs</a></li>
-        <li><a href="#">OS</a></li>
-        <li><a href="#">Kids</a></li>
+        <li><a href="#" class="link">Home</a></li>
+        <li><a href="#" class="link">Development</a></li>
+        <li><a href="#" class="link">Business</a></li>
+        <li><a href="#" class="link">Social Networking</a></li>
+        <li><a href="#" class="link">News</a></li>
+        <li><a href="#" class="link">Sports</a></li>
+        <li><a href="#" class="link">Entertainment</a></li>
+        <li><a href="#" class="link">Games</a></li>
+        <li><a href="#" class="link">Movies</a></li>
+        <li><a href="#" class="link">Music</a></li>
+        <li><a href="#" class="link">Shopping</a></li>
+        <li><a href="#" class="link">Travel</a></li>
+        <li><a href="#" class="link">Health</a></li>
+        <li><a href="#" class="link">Technology</a></li>
+        <li><a href="#" class="link">Social Media</a></li>
+        <li><a href="#" class="link">Blogs</a></li>
+        <li><a href="#" class="link">OS</a></li>
+        <li><a href="#" class="link">Kids</a></li>
       </ul>
+
       <!-- Date -->
       <div>
         <p id="date">Luni, 22 Februarie 2021</p>
       </div>
     </header>
+
     <main class="container">
       <div class="row">
         <!-- Apps section left -->
@@ -69,16 +72,19 @@
           <div class="app"></div>
           <div class="app"></div>
         </aside>
+
         <!-- Clock $ greeting section -->
         <section id="dynamic">
           <!-- Time -->
           <div>
             <p id="time">00:00:00</p>
           </div>
+
           <!-- Greeting -->
           <div>
             <p id="greeting">Buna dimineata, <span id="name">Alex</span>!</p>
           </div>
+
           <!-- Encouraging message -->
           <div>
             <p id="message">
@@ -87,6 +93,7 @@
             </p>
           </div>
         </section>
+
         <!-- Apps section right -->
         <aside class="apps">
           <div class="app"></div>
@@ -142,19 +149,147 @@
         <div class="bookmark"></div>
         <div class="bookmark"></div>
       </section>
+
+      <!-- Settings Window -->
+      <section id="settings-window" class="container popup">
+        <div class="popup-window">
+          <div id="exit-settings">
+            <a href="#" id="exit" class="link text-secondary"
+              ><i class="fas fa-times"></i
+            ></a>
+          </div>
+          <!-- Window title -->
+          <h3 class="primary-title">Settings</h3>
+          <!-- User name settings -->
+          <div id="name-settings" class="settings-category">
+            <p class="secondary-title">Nume Utilizator</p>
+            <label for="user-name">Schimba numele utilizatorului</label>
+            <input
+              type="text"
+              name="user-name"
+              id="user-name"
+              class="input-field"
+            />
+          </div>
+          <!-- Background Settings -->
+          <div id="background-settings" class="settings-category">
+            <p class="secondary-title">Background</p>
+            <div class="item">
+              <label for="video">Selecteaza filmul de fundal</label>
+              <select name="video" id="video">
+                <option value="sample-video">Sample video</option>
+              </select>
+            </div>
+            <div class="item">
+              <label for="new-video">Adauga un nou film</label>
+              <input
+                type="file"
+                name="new-video"
+                id="new-video"
+                class="add-file"
+              />
+              <button id="add-video-btn" class="btn">Adauga Filmul</button>
+            </div>
+            <div class="item">
+              <label for="image">Selecteaza imaginea de fundal</label>
+              <select name="image" id="image">
+                <option value="sample-image">Sample Image</option>
+              </select>
+            </div>
+            <div class="item">
+              <label for="new-image">Adauga o noua imagine</label>
+              <input
+                type="file"
+                name="new-image"
+                id="new-image"
+                class="add-file"
+              />
+              <button id="add-img-btn" class="btn">Adauga Imaginea</button>
+            </div>
+          </div>
+
+          <!-- Bookmarks Settings -->
+          <div id="bookmarks-settings" class="settings-category">
+            <p class="secondary-title">Categorii si Link-uri</p>
+            <div class="item">
+              <label for="category">Selecteaza categoria</label>
+              <select name="category" id="category">
+                <option value="sample-category">Sample category</option>
+              </select>
+              <label for="link">URL-ul Website</label>
+              <input type="text" name="link" id="link" class="input-field" />
+            </div>
+            <div class="item">
+              <label for="website-name">Nume Website</label>
+              <input
+                type="text"
+                name="website-name"
+                id="website-name"
+                class="input-field"
+              />
+              <button id="add-website-btn" class="btn">Adauga Website</button>
+            </div>
+          </div>
+
+          <!-- Cite settings -->
+          <div id="cite-settings" class="settings-category">
+            <p class="secondary-title">Citate</p>
+            <div class="item">
+              <label for="author">Autor</label>
+              <input
+                type="text"
+                name="author"
+                id="author"
+                class="input-field"
+              />
+              <label for="new-cite">Citat</label>
+              <input
+                type="text"
+                name="new-cite"
+                id="new-cite"
+                class="input-field"
+              />
+              <button id="add-cite-btn" class="btn">Adauga citat</button>
+            </div>
+            <div>
+              <div class="item">
+                <label for="select-author">Selecteaza Autor</label>
+                <select name="select-author" id="select-author">
+                  <option value="sample-cite">sample-cite</option>
+                </select>
+                <label for="select-cite">Selecteaza Citat</label>
+                <select name="select-cite" id="select-cite">
+                  <option value="sample-cite">sample-cite</option>
+                </select>
+              </div>
+              <button id="add-cite-btn" class="btn">Afiseaza citat</button>
+            </div>
+          </div>
+          <div>
+            <div class="settings-category item">
+              <button class="btn">Salveaza schimbarile</button>
+              <button class="btn">Nu salva schimbarile</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
     <!-- Footer -->
     <footer>
       <div id="location-and-weather">
+        <!-- Location -->
         <div id="location">
           <p id="city">Constanta,</p>
           <p id="country">Romania</p>
         </div>
+        <!-- Weather -->
         <div id="weather-api">
           <p id="weather"><i class="fas fa-cloud-rain"></i> 5 <sup>0</sup></p>
           <p id="humidity">Humidity <span id="humidity-percent">50 %</span></p>
         </div>
       </div>
+      <!-- Cite -->
       <div>
         <p id="cite">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quam
@@ -162,6 +297,7 @@
           error officiis reiciendis, magnam sunt libero molestias.
         </p>
       </div>
+      <!-- Settings -->
       <div>
         <a href="#" id="settings"><i class="fas fa-cog"></i></a>
       </div>

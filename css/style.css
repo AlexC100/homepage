@@ -1,5 +1,9 @@
 :root {
   --primary-color: #fff;
+  --secondary-color: #333;
+  --primary-transparency: rgba(255, 255, 555, 0.6);
+  --secondary-transparency: rgba(255, 255, 555, 0.9);
+  --light-color: #ccc;
 }
 
 * {
@@ -27,11 +31,24 @@ body {
   align-items: center;
 }
 
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.text-secondary {
+  color: #000;
+}
+
 .bookmark {
   width: 90px;
   height: 90px;
   margin: 10px;
-  background-color: #ccc;
+  background-color: var(--light-color);
   opacity: 0.2;
   border-radius: 10px;
 }
@@ -49,7 +66,7 @@ body {
   width: 50px;
   height: 50px;
   margin: 5px;
-  background-color: #ccc;
+  background-color: var(--light-color);
   opacity: 0.2;
   border-radius: 10px;
 }
@@ -61,6 +78,79 @@ body {
   width: 52px;
   height: 52px;
   margin: 3px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-transparency);
+}
+
+.popup-window {
+  position: relative;
+  margin-top: 40px;
+  width: 70vw;
+  height: 90vh;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: var(--secondary-transparency);
+  color: #333;
+  font-weight: 600;
+}
+
+.primary-title {
+  font-size: 2.5rem;
+  margin-top: -30px;
+}
+
+.secondary-title {
+  font-size: 1.5rem;
+}
+
+.secondary-title:first-child {
+  margin-bottom: 10px;
+}
+
+.settings-category {
+  padding: 5px 0 10px 0;
+  border-bottom: 1px dotted var(--light-color);
+  margin-bottom: 5px;
+}
+
+.settings-category:nth-child(6) {
+  border: none;
+  margin-bottom: 20px;
+}
+
+.settings-category:last-child {
+  border: none;
+}
+
+.btn {
+  padding: 7px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.input-field {
+  border: solid 1px var(--light-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+
+.add-file {
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.item {
+  margin: 10px;
 }
 
 /* Background Video Styling */
@@ -94,15 +184,6 @@ main {
 #navigation ul li {
   display: inline-block;
   padding: 5px;
-}
-
-#navigation ul li a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-#navigation ul li a:hover {
-  opacity: 0.8;
 }
 
 #navigation p {
@@ -178,6 +259,20 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+/* Settings Styling */
+.popup-window #exit-settings {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.popup-window select {
+  padding: 3px 15px;
+  border: 1px var(--light-color) solid;
+  border-radius: 5px;
+  margin: 0 20px 0 10px;
 }
 
 footer {
