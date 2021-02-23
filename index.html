@@ -212,6 +212,16 @@
           <div id="bookmarks-settings" class="settings-category">
             <p class="secondary-title">Categorii si Link-uri</p>
             <div class="item">
+              <label for="new-category">Categorie noua</label>
+              <input
+                type="text"
+                name="new-category"
+                id="new-category"
+                class="input-field"
+              />
+              <button id="add-website-btn" class="btn">Adauga Categorie</button>
+            </div>
+            <div class="item">
               <label for="category">Selecteaza categoria</label>
               <select name="category" id="category">
                 <option value="sample-category">Sample category</option>
@@ -262,13 +272,13 @@
                   <option value="sample-cite">sample-cite</option>
                 </select>
               </div>
-              <button id="add-cite-btn" class="btn">Afiseaza citat</button>
+              <button id="add-cite-btn" class="btn">Afiseaza Citat</button>
             </div>
           </div>
           <div>
             <div class="settings-category item">
-              <button class="btn">Salveaza schimbarile</button>
-              <button class="btn">Nu salva schimbarile</button>
+              <button class="btn">Salveaza Schimbarile</button>
+              <button class="btn">Nu Salva Schimbarile</button>
             </div>
           </div>
         </div>
@@ -292,14 +302,17 @@
       <!-- Cite -->
       <div>
         <p id="cite">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quam
-          nesciunt consequuntur in commodi ipsam mollitia doloribus maiores
-          error officiis reiciendis, magnam sunt libero molestias.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
+          laborum, ex vero maiores rerum sit iusto dolore sunt quam saepe
+          reprehenderit voluptatibus sint consequatur ut omnis, perferendis vel
+          laudantium! Quibusdam.
         </p>
       </div>
       <!-- Settings -->
       <div>
-        <a href="#" id="settings"><i class="fas fa-cog"></i></a>
+        <a href="#" id="settings-gear" class="link"
+          ><i class="fas fa-cog"></i
+        ></a>
       </div>
     </footer>
   </body>

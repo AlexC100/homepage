@@ -87,12 +87,13 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--primary-transparency);
+  display: none;
 }
 
 .popup-window {
   position: relative;
   margin-top: 40px;
-  width: 70vw;
+  width: 90vw;
   height: 90vh;
   padding: 50px;
   border-radius: 10px;
@@ -104,6 +105,8 @@ body {
 .primary-title {
   font-size: 2.5rem;
   margin-top: -30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--light-color);
 }
 
 .secondary-title {
@@ -118,6 +121,7 @@ body {
   padding: 5px 0 10px 0;
   border-bottom: 1px dotted var(--light-color);
   margin-bottom: 5px;
+  margin: auto;
 }
 
 .settings-category:nth-child(6) {
@@ -126,15 +130,18 @@ body {
 }
 
 .settings-category:last-child {
+  margin: 30px auto;
   border: none;
 }
 
 .btn {
   padding: 7px 20px;
+  margin: 0 20px;
   border: none;
   border-radius: 5px;
   background-color: var(--secondary-color);
   color: var(--primary-color);
+  cursor: pointer;
 }
 
 .input-field {
@@ -147,6 +154,10 @@ body {
 .add-file {
   padding: 5px;
   margin: 0 5px;
+  border: solid 1px var(--light-color);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .item {
@@ -273,6 +284,7 @@ main {
   border: 1px var(--light-color) solid;
   border-radius: 5px;
   margin: 0 20px 0 10px;
+  cursor: pointer;
 }
 
 footer {
@@ -288,14 +300,17 @@ footer #location-and-weather {
 }
 
 footer #location-and-weather #weather-api {
+  padding-right: 10px;
   margin-left: 20px;
-  margin-right: -50px;
+  margin-right: -65px;
 }
 footer #cite {
   margin-top: 15px;
+  margin: auto;
+  max-width: 90%;
 }
 
-footer #settings {
+footer #settings-gear {
   display: block;
   margin-top: 10px;
   color: var(--primary-color);
