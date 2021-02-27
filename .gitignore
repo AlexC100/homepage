@@ -6,6 +6,10 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Request tests HTTP
+*.https
+*.http
+
 # Pictures and video files
 *.jpg
 *.mp4

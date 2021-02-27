@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Search API JS -->
+    <script
+      async
+      src="https://cse.google.com/cse.js?cx=ea93ebe85c5677240"
+    ></script>
+
     <!-- Google fonts roboto link -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -28,7 +34,10 @@
   <body class="container">
     <!-- Background video -->
     <video autoplay muted loop id="video-bg">
-      <source src="video/500648.mp4" type="video/mp4" />
+      <source
+        src="video/Star-Wars-Galactic-Republic-Live-Wallpaper.mp4"
+        type="video/mp4"
+      />
     </video>
 
     <!-- Header section -->
@@ -69,27 +78,19 @@
           <div class="app"></div>
           <div class="app"></div>
           <div class="app"></div>
-          <div class="app"></div>
-          <div class="app"></div>
         </aside>
 
         <!-- Clock $ greeting section -->
         <section id="dynamic">
-          <!-- Time -->
+          <!-- Clock -->
           <div>
-            <p id="time">00:00:00</p>
+            <p id="time"></p>
           </div>
-
           <!-- Greeting -->
           <div>
-            <p id="greeting">Buna dimineata, <span id="name">Alex</span>!</p>
-          </div>
-
-          <!-- Encouraging message -->
-          <div>
-            <p id="message">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
-              architecto!
+            <p id="greeting">
+              <span id="greeting-message"></span>
+              <span id="name">Alex</span>!
             </p>
           </div>
         </section>
@@ -100,22 +101,13 @@
           <div class="app"></div>
           <div class="app"></div>
           <div class="app"></div>
-          <div class="app"></div>
-          <div class="app"></div>
         </aside>
       </div>
 
       <!-- Search section -->
       <section id="search-section">
-        <div class="search-section">
-          <input
-            type="search"
-            name="search"
-            id="search"
-            placeholder="Google search..."
-          />
-          <button id="btn"><i class="fa fa-search"></i></button>
-        </div>
+        <!-- <div class="gcse-search" id="search"></div> -->
+        <div class="gcse-searchbox-only" id="search"></div>
       </section>
 
       <!-- Bookmarks Section -->
@@ -277,8 +269,12 @@
           </div>
           <div>
             <div class="settings-category item">
-              <button class="btn">Salveaza Schimbarile</button>
-              <button class="btn">Nu Salva Schimbarile</button>
+              <button class="btn" id="save-changes">
+                Salveaza Schimbarile
+              </button>
+              <button class="btn" id="dont-save-changes">
+                Nu Salva Schimbarile
+              </button>
             </div>
           </div>
         </div>
@@ -294,26 +290,23 @@
           <p id="country">Romania</p>
         </div>
         <!-- Weather -->
-        <div id="weather-api">
-          <p id="weather"><i class="fas fa-cloud-rain"></i> 5 <sup>0</sup></p>
-          <p id="humidity">Humidity <span id="humidity-percent">50 %</span></p>
-        </div>
+        <div id="weather"></div>
       </div>
       <!-- Cite -->
-      <div>
-        <p id="cite">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
-          laborum, ex vero maiores rerum sit iusto dolore sunt quam saepe
-          reprehenderit voluptatibus sint consequatur ut omnis, perferendis vel
-          laudantium! Quibusdam.
-        </p>
-      </div>
+      <div id="quote-section"></div>
       <!-- Settings -->
-      <div>
+      <div id="settings-section">
         <a href="#" id="settings-gear" class="link"
           ><i class="fas fa-cog"></i
         ></a>
       </div>
     </footer>
+
+    <!-- Axios JS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="javascript/main.js"></script>
+    <script src="javascript/settings.js"></script>
   </body>
 </html>
