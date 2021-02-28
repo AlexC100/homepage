@@ -1,0 +1,96 @@
+<div class="popup-window">
+  <div class="exit-window">
+    <a href="#" id="exit-tasks" class="link text-secondary"
+      ><i class="fas fa-times"></i
+    ></a>
+  </div>
+  <h3 class="primary-title border-bottom-light">Task List</h3>
+  <div class="content-2-rows ">
+    <div id="tasks" class="my10 border-right-light">
+      <form id=tasks-form" class="mx30 py20 border-bottom-light">
+        <div class="content-2-rows">
+          <div>
+            <input type="text" id="new-task" class="input-field w500" placeholder="Insert new task...">
+          </div>
+          <div>
+            <select class="select" name="task-tags" id="task-tags">
+              <option value="tag-sample">tag sample</option>
+            </select>
+            <select class="select" name="task-priority" id="priority-tags">
+              <option value="priority-sample">priority sample</option>
+            </select>
+            <input type="color" name="task-color" id="task-color" class="color">
+          </div>
+        </div>
+        <div class="content-2-rows my10">
+          <textarea name="task-description" id="task-description" class="input-field w500 h100" placeholder="Insert a description for your task..."></textarea>
+          <div class="content-2-cols mx30">
+            <div class="my10">
+              <label for="task-due-date">Data limita: </label>
+              <input type="datetime-local" name="task-due-date" id="task-due-date" class="input-field mx10">
+            </div>
+            <div class="my10">
+              <label for="task-notice">Instiintare: </label>
+              <input type="datetime-local" name="task-notice" id="task-notice" class="input-field mx10">
+            </div>
+          </div>
+        </div>
+        <button class="btn w400" id="add-task">Adauga Task</button>
+      </form>
+      <div class="task-list mx30 py20">
+        <div class="task input-field content-2-cols">
+          <div class="content-2-rows main-task-section">
+              <p class="task-title">Task title</p>
+              <div class="content-2-rows">
+                <p><span class="due-date mx5">due date</span> <span class="task-priority mx5">priority</span> <span class="tag mx5">tag</span></p>
+                <a href="#" class="link text-secondary mx5 delete-task"><i class="fas fa-trash"></i></a>
+            </div>
+          </div>
+          <p class="task-description input-field">task description</p>
+        </div>
+        <div class="task input-field content-2-cols">
+          <div class="content-2-rows main-task-section">
+              <p class="task-title">Task title</p>
+              <div class="content-2-rows">
+                <p><span class="due-date mx5">due date</span> <span class="task-priority mx5">priority</span> <span class="tag mx5">tag</span></p>
+                <a href="#" class="link text-secondary mx5 delete-task"><i class="fas fa-trash"></i></a>
+            </div>
+          </div>
+          <p class="task-description input-field">task description</p>
+        </div>
+        <div class="task input-field content-2-cols">
+          <div class="content-2-rows main-task-section">
+              <p class="task-title">Task title</p>
+              <div class="content-2-rows">
+                <p><span class="due-date mx5">due date</span> <span class="task-priority mx5">priority</span> <span class="tag mx5">tag</span></p>
+                <a href="#" class="link text-secondary mx5 delete-task"><i class="fas fa-trash"></i></a>
+            </div>
+          </div>
+          <p class="task-description input-field">task description</p>
+        </div>
+      </div>
+  </div>
+  <div id="control" class="my10 content-2-cols">
+    <select class="select" name="sort-task" id="sort-task">
+      <option value="sample-sort">sample-sort</option>
+    </select>
+    <select class="select" name="show-only-tag" id="show-only-tag">
+      <option value="show-only-tag">show-only-tag</option>
+    </select>
+    <select class="select" name="due-date-sort" id="due-date-sort">
+      <option value="due-date-sort">due-date-sort</option>
+    </select>
+    <div class="mx10 my10">
+      <label for="add-new-tag">Adauga tag nou:</label>
+      <br>
+      <input type="text" name="new-tag" id="new-tag" class="input-field" placeholder="Nume tag...">
+      <button class="btn">Adauga tag</button>
+    </div>
+    <div class="mx10">
+      <label for="add-new-priority">Adauga o noua prioritate:</label>
+      <br>
+      <input type="text" name="new-priority" id="new-priority" class="input-field" placeholder="Nume tag...">
+      <button class="btn">Adauga prioritate</button>
+    </div>
+  </div>
+</div>

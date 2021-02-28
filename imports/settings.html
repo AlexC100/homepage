@@ -1,0 +1,105 @@
+<div class="popup-window">
+  <div class="exit-window">
+    <a href="#" id="exit-settings" class="link text-secondary"
+      ><i class="fas fa-times"></i
+    ></a>
+  </div>
+  <!-- Window title -->
+  <h3 class="primary-title border-bottom-light">Settings</h3>
+  <!-- User name settings -->
+  <div id="name-settings" class="settings-category">
+    <p class="secondary-title">Nume Utilizator</p>
+    <label for="user-name">Schimba numele utilizatorului</label>
+    <input type="text" name="user-name" id="user-name" class="input-field" />
+  </div>
+  <!-- Background Settings -->
+  <div id="background-settings" class="settings-category">
+    <p class="secondary-title">Background</p>
+    <div class="item">
+      <label for="video">Selecteaza filmul de fundal</label>
+      <select class="select" name="video" id="video">
+        <option value="sample-video">Sample video</option>
+      </select>
+    </div>
+    <div class="item">
+      <label for="new-video">Adauga un nou film</label>
+      <input type="file" name="new-video" id="new-video" class="add-file" />
+      <button id="add-video-btn" class="btn">Adauga Filmul</button>
+    </div>
+    <div class="item">
+      <label for="image">Selecteaza imaginea de fundal</label>
+      <select class="select" name="image" id="image">
+        <option value="sample-image">Sample Image</option>
+      </select>
+    </div>
+    <div class="item">
+      <label for="new-image">Adauga o noua imagine</label>
+      <input type="file" name="new-image" id="new-image" class="add-file" />
+      <button id="add-img-btn" class="btn">Adauga Imaginea</button>
+    </div>
+  </div>
+
+  <!-- Bookmarks Settings -->
+  <div id="bookmarks-settings" class="settings-category">
+    <p class="secondary-title">Categorii si Link-uri</p>
+    <div class="item">
+      <label for="new-category">Categorie noua</label>
+      <input
+        type="text"
+        name="new-category"
+        id="new-category"
+        class="input-field"
+      />
+      <button id="add-website-btn" class="btn">Adauga Categorie</button>
+    </div>
+    <div class="item">
+      <label for="category">Selecteaza categoria</label>
+      <select class="select" name="category" id="category">
+        <option value="sample-category">Sample category</option>
+      </select>
+      <label for="link">URL-ul Website</label>
+      <input type="text" name="link" id="link" class="input-field" />
+    </div>
+    <div class="item">
+      <label for="website-name">Nume Website</label>
+      <input
+        type="text"
+        name="website-name"
+        id="website-name"
+        class="input-field"
+      />
+      <button id="add-website-btn" class="btn">Adauga Website</button>
+    </div>
+  </div>
+
+  <!-- Cite settings -->
+  <div id="cite-settings" class="settings-category">
+    <p class="secondary-title">Citate</p>
+    <div class="item">
+      <label for="author">Autor</label>
+      <input type="text" name="author" id="author" class="input-field" />
+      <label for="new-cite">Citat</label>
+      <input type="text" name="new-cite" id="new-cite" class="input-field" />
+      <button id="add-cite-btn" class="btn">Adauga citat</button>
+    </div>
+    <div>
+      <div class="item">
+        <label for="select-author">Selecteaza Autor</label>
+        <select class="select" name="select-author" id="select-author">
+          <option value="sample-cite">sample-cite</option>
+        </select>
+        <label for="select-cite">Selecteaza Citat</label>
+        <select class="select" name="select-cite" id="select-cite">
+          <option value="sample-cite">sample-cite</option>
+        </select>
+      </div>
+      <button id="add-cite-btn" class="btn">Afiseaza Citat</button>
+    </div>
+  </div>
+  <div>
+    <div class="settings-category item">
+      <button class="btn" id="save-changes">Salveaza Schimbarile</button>
+      <button class="btn" id="dont-save-changes">Nu Salva Schimbarile</button>
+    </div>
+  </div>
+</div>

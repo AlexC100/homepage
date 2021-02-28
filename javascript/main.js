@@ -1,13 +1,5 @@
-// UI Variables
-const date = document.querySelector("#date");
-const time = document.querySelector("#time");
-const greeting = document.querySelector("#greeting-message");
-const name = document.querySelector("#name");
-const message = document.querySelector("#message");
-const city = document.querySelector("#city");
-const country = document.querySelector("#country");
-const weather = document.querySelector("#weather");
-const quote = document.querySelector("#quote-section");
+// Generate random number
+const randomNum = Math.floor(Math.random() * 14414);
 
 // Date
 // Date variable
@@ -120,8 +112,7 @@ function getWeather(lat, lon) {
 }
 getLocation();
 
-const randomNum = Math.floor(Math.random() * 14414);
-console.log(randomNum);
+// Get quote
 // Choose Random Quote
 axios
   .get(`/quotes/quotes.json`)
