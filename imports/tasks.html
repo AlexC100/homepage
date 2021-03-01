@@ -7,34 +7,32 @@
   <h3 class="primary-title border-bottom-light">Task List</h3>
   <div class="content-2-rows ">
     <div id="tasks" class="my10 border-right-light">
-      <form id=tasks-form" class="mx30 py20 border-bottom-light">
-        <div class="content-2-rows">
-          <div>
-            <input type="text" id="new-task" class="input-field w500" placeholder="Insert new task...">
+      <form id=tasks-form" class="mx50 py20 border-bottom-light">
+        <div class="content-2-rows"> 
+          <div class="content-2-cols">
+            <input type="text" id="new-task" class="input-field w500 my10" placeholder="Insert new task...">
+            <textarea name="task-description" id="task-description" class="input-field w500 h100" placeholder="Insert a description for your task..."></textarea>
           </div>
-          <div>
+          <div class="content-2-cols mx20">
             <select class="select" name="task-tags" id="task-tags">
               <option value="tag-sample">tag sample</option>
             </select>
             <select class="select" name="task-priority" id="priority-tags">
               <option value="priority-sample">priority sample</option>
             </select>
-            <input type="color" name="task-color" id="task-color" class="color">
+            <input type="color" name="task-color" id="task-color" class="mx10 color">
           </div>
         </div>
-        <div class="content-2-rows my10">
-          <textarea name="task-description" id="task-description" class="input-field w500 h100" placeholder="Insert a description for your task..."></textarea>
-          <div class="content-2-cols mx30">
-            <div class="my10">
-              <label for="task-due-date">Data limita: </label>
-              <input type="datetime-local" name="task-due-date" id="task-due-date" class="input-field mx10">
-            </div>
-            <div class="my10">
-              <label for="task-notice">Instiintare: </label>
-              <input type="datetime-local" name="task-notice" id="task-notice" class="input-field mx10">
-            </div>
+        <div class="content-2-rows mx30">
+          <div class="my10">
+            <label for="task-due-date">Data limita: </label>
+            <input type="datetime-local" name="task-due-date" id="task-due-date" class="input-field mx10">
           </div>
-        </div>
+          <div class="my10">
+            <label for="task-notice">Instiintare: </label>
+            <input type="datetime-local" name="task-notice" id="task-notice" class="input-field mx10">
+          </div>
+      </div>
         <button class="btn w400" id="add-task">Adauga Task</button>
       </form>
       <div class="task-list mx30 py20">

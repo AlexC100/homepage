@@ -1,9 +1,10 @@
 #task-list-window {
-  display: none;
+  /* display: none; */
 }
 
 .task-list {
   max-height: 400px;
+  padding-right: 10px;
   overflow-y: scroll;
 }
 
@@ -17,7 +18,7 @@
 .main-task-section {
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  min-width: 500px;
   padding: 5px;
 }
 
