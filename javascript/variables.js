@@ -12,7 +12,7 @@ const popupWindow = document.querySelector(".popup-window");
 // Settings
 const settings = document.querySelector("#settings");
 const openSettings = document.querySelector("#settings-gear");
-// Task list app
+// Task list
 const taskList = document.querySelector("#task-list-window");
 const openTaskList = document.querySelector("#task-list-app");
 // Location and weather
@@ -20,3 +20,6 @@ const city = document.querySelector("#city");
 const country = document.querySelector("#country");
 const weather = document.querySelector("#weather");
 const weatherForecast = document.querySelector("#weather-forecast-card");
+// Notes
+const notesApp = document.querySelector("#notes-app");
+const notesIcon = document.querySelector("#notes-app-icon");

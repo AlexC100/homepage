@@ -1,3 +1,7 @@
+#notes-app {
+  display: none;
+}
+
 #new-note {
   margin: 10px auto 0 auto;
   border: 1px solid var(--light-color);
@@ -12,7 +16,7 @@
 }
 
 #notes-list {
-  width: 90vw;
+  width: 80vw;
   max-height: 80vh;
   display: flex;
   flex-direction: row;

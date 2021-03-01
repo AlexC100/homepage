@@ -85,9 +85,10 @@ axios
 
           humidity.innerHTML = `Umiditate: ${data.main.humidity} %`;
 
-          windSpeed.innerHTML = `Viteza vantului: ${
-            (data.wind.speed * 60) / 1000
-          } km/s`;
+          windSpeed.innerHTML = `Viteza vantului: ${(
+            (data.wind.speed * 60) /
+            1000
+          ).toFixed(2)} km/s`;
         });
     }
     getLocation();
