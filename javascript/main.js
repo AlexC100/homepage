@@ -76,42 +76,6 @@ function displayGreeting(h) {
     greeting.textContent = "Buna seara, ";
   }
 }
-
-// Location with Geolocation API
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    console.log("Geolocation is not supported by this browser.");
-  }
-}
-
-function showPosition(position) {
-  latitude = position.coords.latitude;
-  longitude = position.coords.longitude;
-  getWeather(latitude, longitude);
-}
-
-// Weather with Open Weather Map API
-function getWeather(lat, lon) {
-  axios
-    .get(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&APPID=1dc0c6d8ffc55f7d946aadc4ff47209b`
-    )
-    .then((res) => res.data)
-    .catch((err) => console.log(err))
-    .then((data) => {
-      city.innerHTML = `${data.name},`;
-      country.innerHTML = data.sys.country;
-      weather.innerHTML += `<img id="weather-icon" src="http://openweathermap.org/img/wn/${
-        data.weather[0].icon
-      }.png"> <span>${Math.round(
-        data.main.temp
-      )}<sup class="sup">o</sup></span>`;
-    });
-}
-getLocation();
-
 // Get quote
 // Choose Random Quote
 axios

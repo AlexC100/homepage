@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/settings.css" />
     <link rel="stylesheet" href="css/tasks.css" />
+    <link rel="stylesheet" href="css/weather-forecast.css" />
 
     <title>Home Page</title>
   </head>
@@ -146,8 +147,14 @@
       <!-- Settings Window -->
       <section id="settings" class="container"></section>
 
-      <!-- Tasks App -->
+      <!-- Task List Application -->
       <section id="task-list-window" class="container"></section>
+
+      <!-- Notes Application -->
+      <section id="notes-app" class="container"></section>
+
+      <!-- Weather Forecast Card -->
+      <section id="weather-forecast-card"></section>
     </main>
 
     <!-- Footer -->
@@ -159,7 +166,7 @@
           <p id="country">Romania</p>
         </div>
         <!-- Weather -->
-        <div id="weather"></div>
+        <div id="weather" class="weather"></div>
       </div>
       <!-- Cite -->
       <div id="quote-section"></div>
@@ -179,5 +186,6 @@
     <script src="javascript/main.js"></script>
     <script src="javascript/settings.js"></script>
     <script src="javascript/task-list.js"></script>
+    <script src="javascript/weather-forecast.js"></script>
   </body>
 </html>

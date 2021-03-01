@@ -96,7 +96,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 90vw;
-  max-height: 90vh;
+  height: 90vh;
   padding: 50px;
   border-radius: 10px;
   background-color: var(--secondary-transparency);
@@ -357,7 +357,7 @@ footer #location {
 }
 
 footer #location-and-weather {
-  width: 150px;
+  width: 180px;
   margin-right: 10px;
   display: flex;
   align-items: center;
