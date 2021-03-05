@@ -1,5 +1,12 @@
 #task-list-window {
-  /* display: none; */
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .task-list {
@@ -18,23 +25,34 @@
 .main-task-section {
   justify-content: space-between;
   align-items: center;
-  min-width: 500px;
   padding: 5px;
 }
 
 .task-title {
   font-weight: 600;
-  min-width: 400px;
+  max-width: 300px;
   text-align: justify;
+}
+.task-info {
+  max-width: 600px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .delete-task {
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
 .task-description {
   margin: 10px 0;
   text-align: justify;
+}
+
+#new-task-description {
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-align: left;
+  background-color: var(--primary-color);
 }
 
 #control {
@@ -52,4 +70,9 @@
 #control .btn {
   display: block;
   margin: 10px auto;
+}
+
+.tag {
+  border-radius: 5px;
+  padding: 5px;
 }

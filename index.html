@@ -148,16 +148,244 @@
       </section>
 
       <!-- Settings Window -->
-      <section id="settings" class="container"></section>
+      <section id="settings" class="container">
+        <div class="popup-window">
+          <div class="exit-window">
+            <a href="#" id="exit-settings" class="link text-secondary"
+              ><i class="fas fa-times"></i
+            ></a>
+          </div>
+          <!-- Window title -->
+          <h3 class="primary-title border-bottom-light">Settings</h3>
+          <!-- User name settings -->
+          <div id="name-settings" class="settings-category">
+            <p class="secondary-title">Nume Utilizator</p>
+            <label for="user-name">Schimba numele utilizatorului</label>
+            <input type="text" name="user-name" id="user-name" class="input-field" />
+          </div>
+          <!-- Background Settings -->
+          <div id="background-settings" class="settings-category">
+            <p class="secondary-title">Background</p>
+            <div class="item">
+              <label for="video">Selecteaza filmul de fundal</label>
+              <select class="select" name="video" id="video">
+                <option value="sample-video">Sample video</option>
+              </select>
+            </div>
+            <div class="item">
+              <label for="new-video">Adauga un nou film</label>
+              <input type="file" name="new-video" id="new-video" class="add-file" />
+              <button id="add-video-btn" class="btn">Adauga Filmul</button>
+            </div>
+            <div class="item">
+              <label for="image">Selecteaza imaginea de fundal</label>
+              <select class="select" name="image" id="image">
+                <option value="sample-image">Sample Image</option>
+              </select>
+            </div>
+            <div class="item">
+              <label for="new-image">Adauga o noua imagine</label>
+              <input type="file" name="new-image" id="new-image" class="add-file" />
+              <button id="add-img-btn" class="btn">Adauga Imaginea</button>
+            </div>
+          </div>
+        
+          <!-- Bookmarks Settings -->
+          <div id="bookmarks-settings" class="settings-category">
+            <p class="secondary-title">Categorii si Link-uri</p>
+            <div class="item">
+              <label for="new-category">Categorie noua</label>
+              <input
+                type="text"
+                name="new-category"
+                id="new-category"
+                class="input-field"
+              />
+              <button id="add-website-btn" class="btn">Adauga Categorie</button>
+            </div>
+            <div class="item">
+              <label for="category">Selecteaza categoria</label>
+              <select class="select" name="category" id="category">
+                <option value="sample-category">Sample category</option>
+              </select>
+              <label for="link">URL-ul Website</label>
+              <input type="text" name="link" id="link" class="input-field" />
+            </div>
+            <div class="item">
+              <label for="website-name">Nume Website</label>
+              <input
+                type="text"
+                name="website-name"
+                id="website-name"
+                class="input-field"
+              />
+              <button id="add-website-btn" class="btn">Adauga Website</button>
+            </div>
+          </div>
+        
+          <!-- Cite settings -->
+          <div id="cite-settings" class="settings-category">
+            <p class="secondary-title">Citate</p>
+            <div class="item">
+              <label for="author">Autor</label>
+              <input type="text" name="author" id="author" class="input-field" />
+              <label for="new-cite">Citat</label>
+              <input type="text" name="new-cite" id="new-cite" class="input-field" />
+              <button id="add-cite-btn" class="btn">Adauga citat</button>
+            </div>
+            <div>
+              <div class="item">
+                <label for="select-author">Selecteaza Autor</label>
+                <select class="select" name="select-author" id="select-author">
+                  <option value="sample-cite">sample-cite</option>
+                </select>
+                <label for="select-cite">Selecteaza Citat</label>
+                <select class="select" name="select-cite" id="select-cite">
+                  <option value="sample-cite">sample-cite</option>
+                </select>
+              </div>
+              <button id="add-cite-btn" class="btn">Afiseaza Citat</button>
+            </div>
+          </div>
+          <div>
+            <div class="settings-category item">
+              <button class="btn" id="save-changes">Salveaza Schimbarile</button>
+              <button class="btn" id="dont-save-changes">Nu Salva Schimbarile</button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Task List Application -->
-      <section id="task-list-window" class="container"></section>
+      <section id="task-list-window" class="container">
+        <div class="popup-window">
+          <div class="exit-window">
+            <a href="#" id="exit-tasks" class="link text-secondary"
+              ><i class="fas fa-times"></i
+            ></a>
+          </div>
+          <h3 class="primary-title border-bottom-light">Task List</h3>
+          <div class="content-2-rows ">
+            <div id="tasks" class="my10">
+              <form id=tasks-form" class="mx50 py20 border-bottom-light">
+                <div class="content-2-rows"> 
+                  <div class="content-2-cols">
+                    <input type="text" id="new-task-title" class="input-field w500 my10" placeholder="Insert new task...">
+                    <div name="task-description" id="new-task-description" class="input-field w500 h100" placeholder="Insert a description for your task..." contenteditable="true"></div>
+                  </div>
+                  <div class="content-2-cols mx20">
+                    <select class="select" name="task-tags" id="task-tags">
+                      <option value="Personal">Personal</option>
+                      <option value="Freelance">Freelance</option>
+                      <option value="Work">Work</option>
+                    </select>
+                    <select class="select" name="task-priorityes" id="task-priorities">
+                      <option value="Normal">Normal</option>
+                      <option value="Important">Important</option>
+                      <option value="Urgent">Urgent</option>
+                    </select>
+                  </div>
+                </div>
+                  <div class="my10">
+                    <label for="task-due-date">Data limita: </label>
+                    <input type="datetime-local" name="task-due-date" id="task-due-date" class="input-field mx10">
+                  </div>
+                <button class="btn w400" id="add-task">Adauga Task</button>
+              </form>
+                <div id="task-list" class="task-list mx30 py20"></div>
+            </div>
+            <!-- <div id="control" class="my10 content-2-cols">
+              <select class="select" name="sort-task" id="sort-task">
+                <option value="sample-sort">sample-sort</option>
+              </select>
+              <select class="select" name="show-only-tag" id="show-only-tag">
+                <option value="show-only-tag">show-only-tag</option>
+              </select>
+              <select class="select" name="due-date-sort" id="due-date-sort">
+                <option value="due-date-sort">due-date-sort</option>
+              </select>
+              <div class="mx10 my10">
+                <label for="add-new-tag">Adauga tag nou:</label>
+                <br>
+                <input type="text" name="new-tag" id="new-tag" class="input-field" placeholder="Nume tag...">
+                <button class="btn">Adauga tag</button>
+              </div>
+              <div class="mx10">
+                <label for="add-new-priority">Adauga o noua prioritate:</label>
+                <br>
+                <input type="text" name="new-priority" id="new-priority" class="input-field" placeholder="Nume tag...">
+                <button class="btn">Adauga prioritate</button>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
 
       <!-- Notes Application -->
-      <section id="notes-app" class="container"></section>
+      <section id="notes-app" class="container">
+        <div class="popup-window">
+          <div class="exit-window">
+            <a href="#" id="exit-notes" class="link text-secondary"
+              ><i class="fas fa-times"></i
+            ></a>
+          </div>
+          <h3 class="primary-title border-bottom-light">Notes Application</h3>
+          <div id="new-note">Creaza o nota noua</div>
+          <div id="notes-list">
+            <div class="note">
+              <div>
+                <div class="note-title">Titlu</div>
+                <p class="note-content">
+                  Lorem ipsum dolor sit Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Nobis rem dolor expedita nesciunt officia cupiditate
+                  corporis. Quod quibusdam exercitationem esse, minus facere reiciendis
+                  dicta cumque et, harum vitae accusamus soluta ea quisquam expedita
+                  praesentium laudantium magnam, asperiores consequuntur tempore error
+                  ut aut! Illo debitis dignissimos, in hic excepturi cumque, asperiores,
+                  minima animi iste magni porro corporis. Cupiditate est omnis, facere
+                  quasi nostrum sit nulla animi consequatur ducimus? Tempora aspernatur
+                  non qui minus beatae earum. Expedita quo aliquam veritatis dolores
+                  laboriosam, delectus vel provident nostrum commodi, at, voluptas
+                  ratione! Iste facere sequi odio autem deleniti quia voluptates eius
+                  ullam quidem lorem1000
+                </p>
+              </div>
+              <div class="note-menu">
+                <a href="#" class="bold menu-button">B</a>
+                <a href="#" class="italic menu-button">i</a>
+                <a href="#" class="underline menu-button">U</a>
+                <!-- <input type="color" name="color" id="color" class="color" />
+                    <select class="tag select">
+                      <option value="sample-tag">sample-tag</option>
+                    </select> -->
+                <a href="#" class="bold menu-button"><i class="fas fa-trash"></i></a>
+                <!-- <a href="#" class="close menu-button">Inchideti</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Weather Forecast Card -->
-      <section id="weather-forecast-card"></section>
+      <section id="weather-forecast-card">
+        <div class="forecast-section p10">
+          <div class="forecast-current">
+            <div class="section">
+              <p class="icon"></p>
+              <p class="temp"></p>
+            </div>
+            <div class="section">
+              <p class="feels-like"></p>
+              <p class="max-temp"></p>
+              <p class="min-temp"></p>
+              <p class="wind-speed"></p>
+              <p class="humidity"></p>
+              <p class="presure"></p>
+              <p class="sea-level"></p>
+            </div>
+          </div>
+        </div>      
+      </section>
     </main>
 
     <!-- Footer -->
@@ -185,11 +413,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="javascript/variables.js"></script>
-    <script src="javascript/main.js"></script>
-    <script src="javascript/settings.js"></script>
-    <script src="javascript/task-list.js"></script>
-    <script src="javascript/weather-forecast.js"></script>
-    <script src="javascript/notes.js"></script>
+    <script src="javascript/app.js"></script>
   </body>
 </html>

@@ -77,6 +77,10 @@ body {
   font-size: 2em;
 }
 
+.app i {
+  color: blue;
+}
+
 .app:hover {
   background-color: var(--bookmark-transparency-transition);
   transition: background-color linear 0.4s;
