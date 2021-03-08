@@ -50,6 +50,9 @@ form {
 
 #new-task-description {
   font-weight: 400;
+  max-width: 500px;
+  max-height: 100px;
+  min-height: 100px;
   font-size: 0.9rem;
   text-align: left;
   background-color: var(--primary-color);

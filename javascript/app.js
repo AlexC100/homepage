@@ -23,10 +23,11 @@ const newTaskTitle = document.querySelector("#new-task-title");
 const newTaskDescription = document.querySelector("#new-task-description");
 const tagSelect = document.querySelector("#task-tags");
 const prioritySelect = document.querySelector("#task-priorities");
-const taskDue = document.querySelector("#task-due-date");
+const taskDueDate = document.querySelector("#task-due-date");
 const submitNewTaskBtn = document.querySelector("#add-task");
 const taskList = document.querySelector("#task-list");
 const deleteTask = document.querySelector(".delete-task");
+const taskDue = document.querySelector(".due-date");
 // Location and weather
 const city = document.querySelector("#city");
 const country = document.querySelector("#country");
@@ -228,11 +229,11 @@ let taskDb = [];
 // Create new task
 function createTask(title, description, tag, priority, due) {
   newTaskObject = {
-    taskTitle: title,
-    taskDue: due,
-    taskPriority: priority,
-    taskTag: tag,
-    taskDescription: description,
+    title: title,
+    description: description,
+    dueDate: due,
+    tag: tag,
+    priority: priority,
   };
 
   taskDb.push(newTaskObject);
@@ -240,35 +241,45 @@ function createTask(title, description, tag, priority, due) {
   taskList.innerHTML += `
       <div class="task input-field content-2-cols">
       <div class="content-2-rows main-task-section">
-        <p class="task-title" contenteditable="true" areamultiline="false">${title}</p>
+        <p class="task-title" areamultiline="false">${title}</p>
         <div class="content-2-rows task-info-and-delete">
           <p class="task-info-group"><span class="due-date mx5">${due}</span> <span class="task-priority mx5">${priority}</span> <span class="tag mx5">${tag}</span></p>
           <a href="#" class="link text-secondary mx5 delete-task"><i class="fas fa-trash"></i></a>
         </div>
       </div>
-      <p class="task-description input-field" contenteditable="true">${description}</p>
+      <p class="task-description input-field">${description}</p>
     </div>
   `;
+
+  // Add the new task to database
+  axios
+    .post("http://localhost:3000/api/task/", newTaskObject)
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
 }
 
-window.addEventListener("onload", () => {
-  let output = "";
-  taskDb.forEach((task) => {
-    output += `
-      <div class="task input-field content-2-cols">
-        <div class="content-2-rows main-task-section">
-          <p class="task-title" contenteditable="true" areamultiline="false">${task.taskTitle}</p>
-          <div class="content-2-rows task-info-and-delete">
-            <p class="task-info-group"><span class="due-date mx5">${task.taskDue}</span> <span class="task-priority mx5">${task.taskPriority}</span> <span class="tag mx5">${task.taskTag}</span></p>
-            <a href="#" class="link text-secondary mx5 delete-task"><i class="fas fa-trash"></i></a>
+window.addEventListener("DOMContentLoaded", () => {
+  axios
+    .get("http://localhost:3000/api/task/")
+    .then((res) => {
+      let output = "";
+      res.data.data.forEach((task) => {
+        output += `
+          <div class="task input-field content-2-cols">
+            <div class="content-2-rows main-task-section">
+              <p class="task-title" areamultiline="false">${task.title}</p>
+              <div class="content-2-rows task-info-and-delete">
+                <p class="task-info-group"><span class="due-date mx5">${task.dueDate}</span> <span class="task-priority mx5">${task.priority}</span> <span class="tag mx5">${task.tag}</span></p>
+                <a href="#" class="link text-secondary mx5 delete-task"><i class="fas fa-trash"></i></a>
+              </div>
+            </div>
+            <p class="task-description input-field">${task.description}</p>
           </div>
-        </div>
-        <p class="task-description input-field" contenteditable="true">${task.taskDescription}</p>
-      </div>
-    `;
-  });
-
-  taskList.innerHTML = output;
+        `;
+      });
+      taskList.innerHTML = output;
+    })
+    .catch((err) => console.log(err));
 });
 
 // Listen for event listener on click to open task list app
@@ -288,22 +299,39 @@ container.addEventListener("click", (e) => {
   }
 });
 
-// Listen for click event listener to add new task
+// Listen for click event to add new task
 submitNewTaskBtn.addEventListener("click", (e) => {
   createTask(
     newTaskTitle.value,
     newTaskDescription.value,
     tagSelect.value,
     prioritySelect.value,
-    taskDue.value
+    taskDueDate.value
   );
+
   e.preventDefault();
 });
 
+// Listen for event listener to delete task
 taskList.addEventListener("click", (e) => {
-  if (e.target.classList.contains("delete-task")) {
-    console.log(e.target);
-    e.target.parentElement.parentElement.parentElement.remove();
+  if (e.target.classList.contains("fa-trash")) {
+    e.target.parentElement.parentElement.parentElement.parentElement.remove();
+    axios
+      .get("http://localhost:3000/api/task/")
+      .then((res) => {
+        res.data.data.forEach((task) => {
+          if (
+            task.dueDate ===
+            e.target.parentElement.previousElementSibling.firstChild.innerText
+          ) {
+            axios
+              .delete(`http://localhost:3000/api/task/${task._id}`)
+              .then((res) => console.log(res))
+              .catch((err) => console.log(err));
+          }
+        });
+      })
+      .catch((err) => console.log(err));
   }
 });
 
