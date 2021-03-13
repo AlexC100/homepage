@@ -179,7 +179,7 @@ function showPosition(position) {
 function getWeather(lat, lon) {
   axios
     .get(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&APPID=1dc0c6d8ffc55f7d946aadc4ff47209b`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&APPID={id}`
     )
     .then((res) => res.data)
     .catch((err) => console.log(err))
